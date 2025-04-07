@@ -1,0 +1,76 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Main Layout with Flexbox */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.section {
+    flex: 1 1 calc(33.333% - 40px); /* 3 columns with gap */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries */
+
+/* Tablet Layout (Max width 768px) */
+@media (max-width: 768px) {
+    .section {
+        flex: 1 1 calc(50% - 40px); /* 2 columns */
+    }
+}
+
+/* Mobile Layout (Max width 480px) */
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column; /* Stack navigation links */
+    }
+
+    .section {
+        flex: 1 1 100%; /* Single column */
+    }
+}
